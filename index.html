@@ -653,6 +653,177 @@
             font-size: 0.9rem;
         }
 
+        /* Education Section */
+        .education-timeline {
+            position: relative;
+            max-width: 900px;
+        }
+
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .education-item {
+            position: relative;
+            padding-left: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .education-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .education-dot {
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .education-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .education-content:hover {
+            border-color: var(--accent);
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .education-degree {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .education-institution {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .education-date {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .education-details {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .education-grade {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .education-grade::before {
+            content: '📊';
+        }
+
+        .education-location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .education-location::before {
+            content: '📍';
+        }
+
+        /* Achievements Section */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .achievement-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.1);
+        }
+
+        .achievement-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .achievement-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .achievement-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .achievement-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .achievement-platform {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .achievement-date {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             nav {
@@ -678,6 +849,14 @@
             .timeline-item {
                 padding-left: 2rem;
             }
+
+            .education-item {
+                padding-left: 2rem;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -693,6 +872,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#achievements">Achievements</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -715,6 +896,7 @@
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                <a href="resume.pdf" download="Dushyant_Joshi_Resume.pdf" class="btn btn-secondary">Download Resume</a>
             </div>
         </div>
     </section>
@@ -881,6 +1063,100 @@
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education">
+        <div class="section-header">
+            <p class="section-label">Education</p>
+            <h2 class="section-title">Academic Background</h2>
+        </div>
+        <div class="education-timeline">
+            <div class="education-item">
+                <div class="education-dot"></div>
+                <div class="education-content">
+                    <div class="education-header">
+                        <div class="education-degree">B.E. in Electronics & Instrumentation Engineering</div>
+                        <span class="education-date">2020 – 2024</span>
+                    </div>
+                    <div class="education-institution">Bangalore Institute of Technology</div>
+                    <div class="education-details">
+                        <div class="education-grade">CGPA: 7.0 / 10.0</div>
+                        <div class="education-location">Bangalore, India</div>
+                    </div>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="education-dot"></div>
+                <div class="education-content">
+                    <div class="education-header">
+                        <div class="education-degree">Higher Secondary (XII)</div>
+                        <span class="education-date">2018 – 2019</span>
+                    </div>
+                    <div class="education-institution">Delhi Public School, Jodhpur</div>
+                    <div class="education-details">
+                        <div class="education-grade">Percentage: 76%</div>
+                        <div class="education-location">Jodhpur, India</div>
+                    </div>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="education-dot"></div>
+                <div class="education-content">
+                    <div class="education-header">
+                        <div class="education-degree">Secondary (X)</div>
+                        <span class="education-date">2016 – 2017</span>
+                    </div>
+                    <div class="education-institution">Delhi Public School, Jodhpur</div>
+                    <div class="education-details">
+                        <div class="education-grade">CGPA: 8.4</div>
+                        <div class="education-location">Jodhpur, India</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="section-header">
+            <p class="section-label">Achievements</p>
+            <h2 class="section-title">Certifications & Accomplishments</h2>
+        </div>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <div class="achievement-icon">💻</div>
+                <h3 class="achievement-title">200+ LeetCode Problems</h3>
+                <p class="achievement-description">
+                    Solved 200+ algorithmic problems on LeetCode and GeeksforGeeks, demonstrating strong data structures and algorithms skills with consistent problem-solving practice.
+                </p>
+                <div class="achievement-meta">
+                    <span class="achievement-platform">LeetCode & GFG</span>
+                    <span class="achievement-date">2024</span>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">🗄️</div>
+                <h3 class="achievement-title">SQL Certification</h3>
+                <p class="achievement-description">
+                    Earned SQL certification from HackerRank, showcasing advanced SQL problem-solving skills and database management expertise.
+                </p>
+                <div class="achievement-meta">
+                    <span class="achievement-platform">HackerRank</span>
+                    <span class="achievement-date">2024</span>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">🏐</div>
+                <h3 class="achievement-title">National Level Volleyball</h3>
+                <p class="achievement-description">
+                    Competed at national level in volleyball, demonstrating teamwork, dedication, and the ability to perform under pressure in competitive environments.
+                </p>
+                <div class="achievement-meta">
+                    <span class="achievement-platform">Sports</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects">
         <div class="section-header">
@@ -984,11 +1260,11 @@
                     </svg>
                     LinkedIn
                 </a>
-                <a href="tel:+919414517404" class="contact-link">
+                <a href="resume.pdf" download="Dushyant_Joshi_Resume.pdf" class="contact-link">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
-                    +91 9414517404
+                    Download Resume
                 </a>
             </div>
         </div>
@@ -1015,7 +1291,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.skill-card, .timeline-item, .project-card, .stat-card').forEach(el => {
+        document.querySelectorAll('.skill-card, .timeline-item, .project-card, .stat-card, .education-item, .achievement-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
