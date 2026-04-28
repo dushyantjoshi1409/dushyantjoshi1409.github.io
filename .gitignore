@@ -23,6 +23,9 @@ Desktop.ini
 # Kiro AI Assistant
 .kiro/
 
+# Separate Projects (not part of portfolio)
+aspora_poc/
+
 # Python
 __pycache__/
 *.py[cod]
