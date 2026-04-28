@@ -85,10 +85,6 @@ lerna-debug.log*
 *.backup
 *~
 
-# Test Files (keep test.py if needed, or remove this line)
-test.py
-*.test.js
-*.spec.js
 
 # Build Output (if you add build process)
 dist/
